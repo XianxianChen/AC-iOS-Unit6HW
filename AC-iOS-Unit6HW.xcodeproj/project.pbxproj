@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E95222B29370D9F67D5762D /* Pods_AC_iOS_Unit6HW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC02177F4E7310AF1C15DFD6 /* Pods_AC_iOS_Unit6HW.framework */; };
+		8178A121203B52BE00ED5FD8 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A120203B52BE00ED5FD8 /* FlashCard.swift */; };
+		8178A124203B54F800ED5FD8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A123203B54F800ED5FD8 /* UserProfile.swift */; };
+		8178A126203B559F00ED5FD8 /* FlashCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A125203B559F00ED5FD8 /* FlashCardService.swift */; };
+		8178A128203B5F5500ED5FD8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A127203B5F5500ED5FD8 /* MainView.swift */; };
+		8178A12A203B602600ED5FD8 /* CreateFlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A129203B602600ED5FD8 /* CreateFlashCardView.swift */; };
+		8178A12C203B99B900ED5FD8 /* CreateFlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A12B203B99B900ED5FD8 /* CreateFlashCardViewController.swift */; };
+		8178A12E203B9C0E00ED5FD8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A12D203B9C0E00ED5FD8 /* TabBarViewController.swift */; };
+		8178A130203B9C6500ED5FD8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A12F203B9C6500ED5FD8 /* MainViewController.swift */; };
+		8178A132203BEC3900ED5FD8 /* CategoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178A131203BEC3900ED5FD8 /* CategoryHelper.swift */; };
 		81C664F92036645100A38C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C664F82036645100A38C22 /* AppDelegate.swift */; };
-		81C664FB2036645100A38C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C664FA2036645100A38C22 /* ViewController.swift */; };
+		81C664FB2036645100A38C22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C664FA2036645100A38C22 /* LoginViewController.swift */; };
 		81C664FE2036645100A38C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C664FC2036645100A38C22 /* Main.storyboard */; };
 		81C665012036645100A38C22 /* AC_iOS_Unit6HW.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81C664FF2036645100A38C22 /* AC_iOS_Unit6HW.xcdatamodeld */; };
 		81C665032036645100A38C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C665022036645100A38C22 /* Assets.xcassets */; };
 		81C665062036645100A38C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C665042036645100A38C22 /* LaunchScreen.storyboard */; };
+		81C678692039D1DC00830ACB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C678682039D1DC00830ACB /* LoginView.swift */; };
+		81C6786E2039DAFF00830ACB /* CreateNewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6786D2039DAFF00830ACB /* CreateNewAccountView.swift */; };
+		81C678702039DFBF00830ACB /* CreateAccoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6786F2039DFBF00830ACB /* CreateAccoutViewController.swift */; };
+		81C678742039EAE600830ACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81C678732039EAE500830ACB /* GoogleService-Info.plist */; };
+		81C678762039F00800830ACB /* FirebaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C678752039F00800830ACB /* FirebaseAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A9BEBAB5844B322A0D228E /* Pods-AC-iOS-Unit6HW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Unit6HW.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Unit6HW/Pods-AC-iOS-Unit6HW.release.xcconfig"; sourceTree = "<group>"; };
+		5A87680697ABA1A71C5FACF3 /* Pods-AC-iOS-Unit6HW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Unit6HW.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Unit6HW/Pods-AC-iOS-Unit6HW.debug.xcconfig"; sourceTree = "<group>"; };
+		8178A120203B52BE00ED5FD8 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
+		8178A123203B54F800ED5FD8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		8178A125203B559F00ED5FD8 /* FlashCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardService.swift; sourceTree = "<group>"; };
+		8178A127203B5F5500ED5FD8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8178A129203B602600ED5FD8 /* CreateFlashCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashCardView.swift; sourceTree = "<group>"; };
+		8178A12B203B99B900ED5FD8 /* CreateFlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashCardViewController.swift; sourceTree = "<group>"; };
+		8178A12D203B9C0E00ED5FD8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8178A12F203B9C6500ED5FD8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8178A131203BEC3900ED5FD8 /* CategoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHelper.swift; sourceTree = "<group>"; };
 		81C664F52036645100A38C22 /* AC-iOS-Unit6HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Unit6HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C664F82036645100A38C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81C664FA2036645100A38C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81C664FA2036645100A38C22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81C664FD2036645100A38C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81C665002036645100A38C22 /* AC_iOS_Unit6HW.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AC_iOS_Unit6HW.xcdatamodel; sourceTree = "<group>"; };
 		81C665022036645100A38C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C665052036645100A38C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C665072036645100A38C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81C678682039D1DC00830ACB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		81C6786D2039DAFF00830ACB /* CreateNewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountView.swift; sourceTree = "<group>"; };
+		81C6786F2039DFBF00830ACB /* CreateAccoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccoutViewController.swift; sourceTree = "<group>"; };
+		81C678732039EAE500830ACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81C678752039F00800830ACB /* FirebaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIClient.swift; sourceTree = "<group>"; };
+		EC02177F4E7310AF1C15DFD6 /* Pods_AC_iOS_Unit6HW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Unit6HW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E95222B29370D9F67D5762D /* Pods_AC_iOS_Unit6HW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A00D7FE7C7E4025813A198 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A87680697ABA1A71C5FACF3 /* Pods-AC-iOS-Unit6HW.debug.xcconfig */,
+				12A9BEBAB5844B322A0D228E /* Pods-AC-iOS-Unit6HW.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8178A122203B52C500ED5FD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8178A120203B52BE00ED5FD8 /* FlashCard.swift */,
+				8178A123203B54F800ED5FD8 /* UserProfile.swift */,
+				8178A131203BEC3900ED5FD8 /* CategoryHelper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		81C664EC2036645100A38C22 = {
 			isa = PBXGroup;
 			children = (
 				81C664F72036645100A38C22 /* AC-iOS-Unit6HW */,
 				81C664F62036645100A38C22 /* Products */,
+				24A00D7FE7C7E4025813A198 /* Pods */,
+				8D87CD22D369C2203FA1F62B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +110,67 @@
 		81C664F72036645100A38C22 /* AC-iOS-Unit6HW */ = {
 			isa = PBXGroup;
 			children = (
-				81C664F82036645100A38C22 /* AppDelegate.swift */,
-				81C664FA2036645100A38C22 /* ViewController.swift */,
-				81C664FC2036645100A38C22 /* Main.storyboard */,
-				81C665022036645100A38C22 /* Assets.xcassets */,
-				81C665042036645100A38C22 /* LaunchScreen.storyboard */,
+				81C678772039F45100830ACB /* Services */,
+				81C6786C2039D50900830ACB /* Supporting Files */,
+				81C6786B2039D4EB00830ACB /* View Controllers */,
+				81C6786A2039D1E600830ACB /* Views */,
 				81C665072036645100A38C22 /* Info.plist */,
+				81C678732039EAE500830ACB /* GoogleService-Info.plist */,
 				81C664FF2036645100A38C22 /* AC_iOS_Unit6HW.xcdatamodeld */,
 			);
 			path = "AC-iOS-Unit6HW";
+			sourceTree = "<group>";
+		};
+		81C6786A2039D1E600830ACB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81C678682039D1DC00830ACB /* LoginView.swift */,
+				81C6786D2039DAFF00830ACB /* CreateNewAccountView.swift */,
+				8178A127203B5F5500ED5FD8 /* MainView.swift */,
+				8178A129203B602600ED5FD8 /* CreateFlashCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81C6786B2039D4EB00830ACB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8178A12D203B9C0E00ED5FD8 /* TabBarViewController.swift */,
+				81C664FA2036645100A38C22 /* LoginViewController.swift */,
+				81C6786F2039DFBF00830ACB /* CreateAccoutViewController.swift */,
+				8178A12F203B9C6500ED5FD8 /* MainViewController.swift */,
+				8178A12B203B99B900ED5FD8 /* CreateFlashCardViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		81C6786C2039D50900830ACB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81C664F82036645100A38C22 /* AppDelegate.swift */,
+				81C664FC2036645100A38C22 /* Main.storyboard */,
+				81C665022036645100A38C22 /* Assets.xcassets */,
+				81C665042036645100A38C22 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81C678772039F45100830ACB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81C678752039F00800830ACB /* FirebaseAPIClient.swift */,
+				8178A125203B559F00ED5FD8 /* FlashCardService.swift */,
+				8178A122203B52C500ED5FD8 /* Models */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D87CD22D369C2203FA1F62B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC02177F4E7310AF1C15DFD6 /* Pods_AC_iOS_Unit6HW.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81C6650A2036645100A38C22 /* Build configuration list for PBXNativeTarget "AC-iOS-Unit6HW" */;
 			buildPhases = (
+				5C3F9DB563BA9C82331306D7 /* [CP] Check Pods Manifest.lock */,
 				81C664F12036645100A38C22 /* Sources */,
 				81C664F22036645100A38C22 /* Frameworks */,
 				81C664F32036645100A38C22 /* Resources */,
+				E4D83B790AD060AA2B171446 /* [CP] Embed Pods Frameworks */,
+				55332F494ECB1B4D73D5DED4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C665062036645100A38C22 /* LaunchScreen.storyboard in Resources */,
+				81C678742039EAE600830ACB /* GoogleService-Info.plist in Resources */,
 				81C665032036645100A38C22 /* Assets.xcassets in Resources */,
 				81C664FE2036645100A38C22 /* Main.storyboard in Resources */,
 			);
@@ -134,14 +244,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55332F494ECB1B4D73D5DED4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Unit6HW/Pods-AC-iOS-Unit6HW-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C3F9DB563BA9C82331306D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AC-iOS-Unit6HW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D83B790AD060AA2B171446 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Unit6HW/Pods-AC-iOS-Unit6HW-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Unit6HW/Pods-AC-iOS-Unit6HW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81C664F12036645100A38C22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C664FB2036645100A38C22 /* ViewController.swift in Sources */,
+				81C664FB2036645100A38C22 /* LoginViewController.swift in Sources */,
 				81C664F92036645100A38C22 /* AppDelegate.swift in Sources */,
+				8178A121203B52BE00ED5FD8 /* FlashCard.swift in Sources */,
+				8178A12A203B602600ED5FD8 /* CreateFlashCardView.swift in Sources */,
+				8178A12E203B9C0E00ED5FD8 /* TabBarViewController.swift in Sources */,
+				81C678692039D1DC00830ACB /* LoginView.swift in Sources */,
 				81C665012036645100A38C22 /* AC_iOS_Unit6HW.xcdatamodeld in Sources */,
+				81C678702039DFBF00830ACB /* CreateAccoutViewController.swift in Sources */,
+				8178A12C203B99B900ED5FD8 /* CreateFlashCardViewController.swift in Sources */,
+				8178A130203B9C6500ED5FD8 /* MainViewController.swift in Sources */,
+				8178A126203B559F00ED5FD8 /* FlashCardService.swift in Sources */,
+				8178A128203B5F5500ED5FD8 /* MainView.swift in Sources */,
+				81C678762039F00800830ACB /* FirebaseAPIClient.swift in Sources */,
+				8178A132203BEC3900ED5FD8 /* CategoryHelper.swift in Sources */,
+				81C6786E2039DAFF00830ACB /* CreateNewAccountView.swift in Sources */,
+				8178A124203B54F800ED5FD8 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +461,7 @@
 		};
 		81C6650B2036645100A38C22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A87680697ABA1A71C5FACF3 /* Pods-AC-iOS-Unit6HW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +476,7 @@
 		};
 		81C6650C2036645100A38C22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A9BEBAB5844B322A0D228E /* Pods-AC-iOS-Unit6HW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

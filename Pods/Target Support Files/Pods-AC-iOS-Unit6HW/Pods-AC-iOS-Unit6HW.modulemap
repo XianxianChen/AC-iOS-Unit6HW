@@ -1,0 +1,6 @@
+framework module Pods_AC_iOS_Unit6HW {
+  umbrella header "Pods-AC-iOS-Unit6HW-umbrella.h"
+
+  export *
+  module * { export * }
+}
