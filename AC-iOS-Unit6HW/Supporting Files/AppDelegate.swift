@@ -19,9 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         let vc = LoginViewController()
+        let mainVC = MainViewController()
+        let narVC = UINavigationController(rootViewController: mainVC)
         window = UIWindow(frame: UIScreen.main.bounds)
+        let currentUser = Auth.auth().currentUser
+        print(currentUser?.email)
+            if currentUser != nil {
+            window?.rootViewController = narVC
+            } else {
+            window?.rootViewController = vc
+        }
         window?.makeKeyAndVisible()
-        window?.rootViewController = vc
         return true
     }
 

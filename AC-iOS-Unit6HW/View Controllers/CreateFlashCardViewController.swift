@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CreateFlashCardViewController: UIViewController {
     
     let createView = CreateFlashCardView()
-    var categories = [String]()
+    var categories = [String]() {
+        didSet {
+            createView.tableView.reloadData()
+        }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categories = CateoryHelper.manager.getAllCategory()
@@ -22,13 +29,38 @@ class CreateFlashCardViewController: UIViewController {
         view.addSubview(createView)
         self.createView.tableView.delegate = self
         self.createView.tableView.dataSource = self
+        createView.questionTextView.delegate = self
+        createView.answerTextField.delegate = self
+        createView.createCateTF.delegate = self
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .done, target: self, action: #selector(submitCard))
         createView.tableView.isHidden = true
         createView.categoryButton.addTarget(self, action: #selector(animateTV), for: .touchUpInside)
+    
     }
     @objc func submitCard() {
-        createView.questionTextView.text = ""
+        // reset tf and tv to empty
+         let newQuestion = createView.questionTextView.text
+        guard !newQuestion!.isEmpty, newQuestion != "Enter question here" else {
+            showAlert(title: "No question", message: "The question can not be empty, please enter a question")
+            return
+        }
+        let newAnswer = createView.answerTextField.text
+        guard newAnswer != nil,  newAnswer != "" else {
+            showAlert(title: "No answer", message: "The answer can not be empty, please enter an answer")
+            return
+        }
+        let newCategory = createView.categoryButton.title(for: .normal)
+        guard newCategory != "Select a category" else {
+            showAlert(title: "NO category", message: "Please select a category Or create one")
+            return}
+        FlashCardService.manager.createFlashCard(question: newQuestion!, answer: newAnswer!, userID: Auth.auth().currentUser!.uid, category: newCategory!)
+        showAlert(title: "Success", message: "You've created a flash card")
+        
+        createView.questionTextView.text = "Enter question here"
         createView.answerTextField.text = ""
+        createView.createCateTF.text = ""
+        createView.categoryButton.setTitle("Select a category", for: .normal)
+        
     }
     @objc func animateTV() {
         let tv = createView.tableView
@@ -51,12 +83,22 @@ class CreateFlashCardViewController: UIViewController {
         } else {
            tv.isHidden = true
         }
-        
+    }
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
    
 }
 extension CreateFlashCardViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCategory = categories[indexPath.row]
+        self.createView.categoryButton.setTitle(selectedCategory, for: .normal)
+        createView.tableView.isHidden = true
+        self.createView.createCateTF.text = ""
+    }
 }
 extension CreateFlashCardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +107,28 @@ extension CreateFlashCardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
         cell.textLabel?.text = categories[indexPath.row]
+        
         return cell
     }
+}
+extension CreateFlashCardViewController: UITextFieldDelegate, UITextViewDelegate {
+  
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+ 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard textField.text != nil, textField.text != "" else {return false}
+        
+       if textField == createView.createCateTF {
+            let newCategory = textField.text!
+            self.createView.categoryButton.setTitle(newCategory, for: .normal)
+            CateoryHelper.manager.addToCategory(newItem: newCategory)
+            self.categories = CateoryHelper.manager.getAllCategory()
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 }

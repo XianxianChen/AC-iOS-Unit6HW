@@ -57,6 +57,8 @@ class CreateFlashCardView: UIView {
     lazy var createCateTF: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter a new category"
+        tf.layer.borderWidth = 0.2
+        tf.layer.borderColor = UIColor.gray.cgColor
         return tf
     }()
     override init(frame: CGRect) {
@@ -80,9 +82,9 @@ class CreateFlashCardView: UIView {
         addSubview(answerLabel)
         addSubview(answerTextField)
         addSubview(categoryButton)
-        addSubview(tableView)
         addSubview(createCateLabel)
         addSubview(createCateTF)
+        addSubview(tableView)
         
         questionLabel.snp.makeConstraints { (make) in
          make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(15)

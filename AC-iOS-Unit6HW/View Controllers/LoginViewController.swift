@@ -28,17 +28,26 @@ class LoginViewController: UIViewController {
   
     @objc func loginUser() {
         guard let email = loginView.emailTextField.text, email != "", let password = loginView.passwordTextField.text, password != "" else {return}
-        FirebaseAPIClient.manager.loginUser(email: email, password: password)
-       // navigationController?.modalTransitionStyle = .coverVertical
-      //  navigationController?.modalPresentationStyle = .overCurrentContext
-       // navigationController?.pushViewController(MainViewController(), animated: true)
-        let narVC = UINavigationController(rootViewController: MainViewController())
-        present(narVC, animated: true, completion: nil)
+        FirebaseAPIClient.manager.loginUser(email: email, password: password, completionHandler:{(user, error) in
+            if let error = error {
+                self.showAlert(title: "Error login", message: error.localizedDescription)
+            }
+            if let _ = user {
+                let narVC = UINavigationController(rootViewController: MainViewController())
+               self.present(narVC, animated: true, completion: nil)
+            }
+        })
+        
     }
     @objc func showCreateAccoutVC() {
         present(CreateAccoutViewController(), animated: true, completion: nil)
     }
-   
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
    
 
 

@@ -11,12 +11,14 @@ class CateoryHelper {
     static let manager = CateoryHelper()
     private var allCategory: [String] = [ "Animals", "Art", "Beauty", "Books", "Business",
                                           "Education","Entertainment","News","Science",
-                                          "Fashion", "Sports",  "Food","Health", "Other",
+                                          "Fashion", "Food","Health", "Other", "Math",
                                           "Sports","Tech","Travel","TV",]
     func getAllCategory() -> [String] {
         return allCategory.sorted()
     }
     func addToCategory(newItem: String) {
+        if !allCategory.contains(newItem) {
         self.allCategory.append(newItem)
+        }
     }
 }

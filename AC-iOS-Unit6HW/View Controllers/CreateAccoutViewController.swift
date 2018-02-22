@@ -24,9 +24,23 @@ class CreateAccoutViewController: UIViewController {
     }
     @objc func createNewAccout() {
         guard let userName = createView.userNameTF.text, userName != "", let email = createView.emailTextField.text, email != "", let password = createView.passwordTextField.text, password != "" else {return}
-        FirebaseAPIClient.manager.creatNewAccout(email: email, password: password, displayName: userName)
+        FirebaseAPIClient.manager.creatNewAccout(email: email, password: password, displayName: userName, completionHandler: {(user, error) in
+            if let error = error {
+                print("create new account error: \(error)")
+                self.showAlert(title: "Error creating account", message: error.localizedDescription)
+            }
+            if let _ = user {
+                self.showAlert(title: "Success", message: "Account has been created.")
+            }
+            
+        })
     }
   
-    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 
 }

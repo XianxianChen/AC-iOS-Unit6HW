@@ -7,13 +7,19 @@
 //
 
 import Foundation
-struct UserProfile {
+struct UserProfile: Codable {
     let email: String
     let displayName: String
     let userID: String
-    init(email: String, displayName: String, userID: String) {
-        self.email = email
-        self.displayName = displayName
-        self.userID = userID
+//    init(email: String, displayName: String, userID: String) {
+//        self.email = email
+//        self.displayName = displayName
+//        self.userID = userID
+//    }
+    func toJson() -> Any {
+        let jsonData = try! JSONEncoder().encode(self)
+       let object = try! JSONSerialization.jsonObject(with: jsonData, options: [])
+        return object
     }
+    
 }
